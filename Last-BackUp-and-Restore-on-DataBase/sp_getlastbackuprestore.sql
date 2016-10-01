@@ -31,10 +31,10 @@ SELECT  @@Servername AS ServerName ,
 		MAX([db_r].[restore_date]) AS LastRestoreCompleted
 FROM    sys.databases db
         LEFT OUTER JOIN [msdb]..[backupset] db_b
-                    ON [db_b].[database_name] = db.[name]
+                    ON [db_b].[database_name] = [db].[name]
                        AND ([db_b].[type] = 'D' or [db_b].[type] = 'I')
 		LEFT OUTER JOIN [msdb]..[restorehistory] db_r
-                    ON [db_r].[destination_database_name] = db.name
+                    ON [db_r].[destination_database_name] = [db].[name]
                        AND ([db_r].[restore_type]='D' or [db_r].[restore_type]='I')		
 								WHERE 
 								[db].[name] LIKE
