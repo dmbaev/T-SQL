@@ -8,8 +8,6 @@ GO
 Last BackUp and Restore on DataBase v1 (09-29-2016)
 (C) 2016, Dmitrii Baev
 
-http://dmbaev.com
-
 License: 
 	free to download and use.
 *********************************************************************************************/
